@@ -154,8 +154,12 @@ didn't: an original score arranged to match the video's own arc, the highest-eff
 the three music options and the one `PLANNING.md`'s peak creative level calls for.
 
 ```
-compose_score(videoName: "demo")
+compose_score(videoName: "demo", mode: "bed")
 ```
+
+`mode` is required. Choose `"bed"` (-15 LUFS) for a narrated video, the usual
+case because the score sits under voiceover. Choose `"music"` (-14 LUFS) only
+for a music-only video with no voiceover. There is no silent default.
 
 It reads the music plan straight off that video's `brief.json` (bpm, key, the section
 arc, the impact points), or takes one directly via the `music` input instead of
